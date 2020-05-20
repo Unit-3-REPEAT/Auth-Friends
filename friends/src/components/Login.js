@@ -32,11 +32,10 @@ class Login extends React.Component {
         axiosWithAuth()
             .post('/api/login', this.state.credentials)
             .then(response => {
-                console.log(response);
+                console.log(`->`, response);
                 console.log(`this.props.history`, this.props.history);
                 localStorage.setItem('token', response.data.payload);
-                this.props.history.push('/protected')
-               
+                this.props.history.push('/protected')              
                 
             })
             .catch(err => console.log(err))

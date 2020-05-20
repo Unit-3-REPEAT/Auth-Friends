@@ -14,6 +14,8 @@ class FriendsList extends React.Component {
     //GET REQUEST TO FETCH DATA
     //getData here
     getData = () => {
+     // make a GET request to fetch the data
+     // pass the token with the request on the Authorization request header
         axiosWithAuth()
         .get('/api/friends')
         .then(response => {
